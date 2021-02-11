@@ -14,6 +14,7 @@ Pod::Spec.new do |s|
   s.source       = { :git => "https://github.com/Jumio/mobile-flutter.git", :tag => "#{s.version}" }
 
   s.source_files = "Classes/**/*.{h,c,m,swift}"
+  s.resource = "Localizations/**/*.strings"
   s.requires_arc = true
 
   s.dependency 'Flutter'
