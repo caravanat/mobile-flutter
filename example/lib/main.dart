@@ -59,12 +59,6 @@ class _HomePageState extends State<HomePage> {
                   startAuthentication();
                 },
               ),
-              RaisedButton(
-                child: Text("Start Document Verification"),
-                onPressed: () {
-                  startDocumentVerification();
-                },
-              ),
             ],
           ),
         ),
@@ -106,27 +100,6 @@ class _HomePageState extends State<HomePage> {
       });
       final result = await JumioMobileSDK.startAuthentication();
       await _showDialogWithMessage("Authentication has completed. Result: $result");
-    });
-  }
-
-  Future<void> startDocumentVerification() async {
-    await _logErrors(() async {
-      await JumioMobileSDK.initDocumentVerification(
-          API_TOKEN, API_SECRET, DATACENTER, {
-        "type": "BS",
-        "userReference": "123456789",
-        "country": "USA",
-        "customerInternalReference": "123456789",
-        //"reportingCriteria": "Criteria",
-        //"callbackUrl": "URL",
-        //"documentName": "Name",
-        //"customDocumentCode": "Custom",
-        //"cameraPosition": "back",
-        //"enableExtraction": true
-      });
-      final result = await JumioMobileSDK.startDocumentVerification();
-      await _showDialogWithMessage(
-          "Document verification completed with result: " + result.toString());
     });
   }
 
