@@ -65,12 +65,6 @@ class _HomePageState extends State<HomePage> {
                   startDocumentVerification();
                 },
               ),
-              RaisedButton(
-                child: Text("Start BAM Checkout"),
-                onPressed: () {
-                  startBam();
-                },
-              ),
             ],
           ),
         ),
@@ -133,37 +127,6 @@ class _HomePageState extends State<HomePage> {
       final result = await JumioMobileSDK.startDocumentVerification();
       await _showDialogWithMessage(
           "Document verification completed with result: " + result.toString());
-    });
-  }
-
-  Future<void> startBam() async {
-    await _logErrors(() async {
-      await JumioMobileSDK.initBAM(
-          BAM_API_TOKEN, BAM_API_SECRET, BAM_DATACENTER, {
-//      "cardHolderNameRequired": true,
-//      "sortCodeAndAccountNumberRequired": false,
-//      "expiryRequired": true,
-//      "cvvRequired": true,
-//      "expiryEditable": false,
-//      "cardHolderNameEditable": false,
-//      "reportingCriteria": "Criteria",
-//      "vibrationEffectEnabled": true,
-//      "enableFlashOnScanStart": false,
-//      "cardNumberMaskingEnabled": false,
-//      "offlineToken": "TOKEN",
-//      "cameraPosition": "back",
-//      "cardTypes": [
-//        "VISA",
-//        "MASTER_CARD",
-//        "AMERICAN_EXPRESS",
-//        "CHINA_UNIONPAY",
-//        "DINERS_CLUB",
-//        "DISCOVER",
-//        "JCB"
-//      ]
-      });
-      final result = await JumioMobileSDK.startBAM();
-      await _showDialogWithMessage("BAM checkout result: $result");
     });
   }
 

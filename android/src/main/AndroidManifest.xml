@@ -8,11 +8,6 @@
             android:name="com.jumio.nv.NetverifyActivity"
             android:configChanges="orientation|screenSize|screenLayout|keyboardHidden" />
         <activity
-            android:name="com.jumio.bam.BamActivity"
-            android:configChanges="orientation|screenSize|screenLayout|keyboardHidden"
-            android:hardwareAccelerated="true"
-            android:theme="@style/Theme.Bam"/>
-        <activity
             android:name="com.jumio.dv.DocumentVerificationActivity"
             android:windowSoftInputMode="adjustResize"
             android:configChanges="orientation|screenSize|screenLayout|keyboardHidden"

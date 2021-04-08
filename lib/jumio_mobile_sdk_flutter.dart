@@ -57,20 +57,4 @@ class JumioMobileSDK {
   static Future<Map<dynamic, dynamic>> startDocumentVerification() async {
     return await _channel.invokeMethod('startDocumentVerification');
   }
-
-  static Future<void> initBAM(String apiToken, String apiSecret,
-      String dataCenter, Map<String, dynamic> options,
-      [Map<String, dynamic> customization]) async {
-    await _channel.invokeMethod('initBAM', {
-      'apiToken': apiToken,
-      'apiSecret': apiSecret,
-      'dataCenter': dataCenter,
-      'options': options,
-      'customization': customization
-    });
-  }
-
-  static Future<Map<dynamic, dynamic>> startBAM() async {
-    return await _channel.invokeMethod('startBAM');
-  }
 }

@@ -22,8 +22,6 @@
 	<string>$(FLUTTER_BUILD_NUMBER)</string>
 	<key>LSRequiresIPhoneOS</key>
 	<true/>
-	<key>NFCReaderUsageDescription</key>
-	<string>This will allow ${PRODUCT_NAME} to scan passports with NFC.</string>
 	<key>NSCameraUsageDescription</key>
 	<string>This will allow ${PRODUCT_NAME} to take photos of your credentials.</string>
 	<key>UILaunchStoryboardName</key>
@@ -45,9 +43,5 @@
 	</array>
 	<key>UIViewControllerBasedStatusBarAppearance</key>
 	<false/>
-	<key>com.apple.developer.nfc.readersession.iso7816.select-identifiers</key>
-	<array>
-		<string>A0000002471001</string>
-	</array>
 </dict>
 </plist>
