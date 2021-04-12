@@ -1,4 +1,3 @@
-import BAMCheckout
 import Foundation
 import JumioCore
 import Netverify
