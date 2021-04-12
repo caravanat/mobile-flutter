@@ -50,7 +50,6 @@ dependencies {
     implementation "com.jumio.android:nv:${SDK_VERSION}@aar"
     implementation "com.jumio.android:nv-ocr:3.9.1@aar"       // Template matcher
     implementation "com.jumio.android:dv:${SDK_VERSION}@aar"
-    implementation "com.jumio.android:face:${SDK_VERSION}@aar"
 
     //for core:
     implementation "androidx.appcompat:appcompat:1.2.0"
