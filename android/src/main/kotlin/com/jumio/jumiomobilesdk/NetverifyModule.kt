@@ -33,7 +33,7 @@ class NetverifyModule : ModuleBase(), NetverifyDeallocationCallback {
                         call.argument("dataCenter") ?: "",
                         call.argument("options"))
             },
-            "startNetverify" to { _ -> startNetverify() },
+            "startNetverify" to { _ -> startNetverify() }
     )
 
     private var netverifySDK: NetverifySDK? = null

@@ -17,8 +17,7 @@ class JumioMobileSdkPlugin : FlutterPlugin, MethodCallHandler, ActivityAware, Pl
 
     private val modules: List<JumioMobileSdkModule> = listOf(
             NetverifyModule(),
-            DocumentVerificationModule(),
-            BamCheckoutModule()
+            AuthenticationModule()
     )
 
     // This static function is optional and equivalent to onAttachedToEngine. It supports the old
