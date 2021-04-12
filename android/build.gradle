@@ -24,7 +24,6 @@ rootProject.allprojects {
 
 apply plugin: 'com.android.library'
 apply plugin: 'kotlin-android'
-apply plugin: 'kotlin-parcelize'
 
 android {
     compileSdkVersion 29
@@ -47,14 +46,11 @@ ext {
 dependencies {
     implementation "org.jetbrains.kotlin:kotlin-stdlib-jdk7:$kotlin_version"
     implementation "com.jumio.android:core:${SDK_VERSION}@aar"
-    implementation "com.jumio.android:bam:${SDK_VERSION}@aar"
+    implementation "com.jumio.android:auth:${SDK_VERSION}@aar"
     implementation "com.jumio.android:nv:${SDK_VERSION}@aar"
-    implementation "com.jumio.android:nv-mrz:${SDK_VERSION}@aar"
-    implementation "com.jumio.android:nv-nfc:${SDK_VERSION}@aar"
-    implementation "com.jumio.android:nv-ocr:${SDK_VERSION}@aar"
-    implementation "com.jumio.android:nv-barcode:${SDK_VERSION}@aar"
-    implementation "com.jumio.android:iproov:${SDK_VERSION}@aar"
+    implementation "com.jumio.android:nv-ocr:3.9.1@aar"       // Template matcher
     implementation "com.jumio.android:dv:${SDK_VERSION}@aar"
+    implementation "com.jumio.android:face:${SDK_VERSION}@aar"
 
     //for core:
     implementation "androidx.appcompat:appcompat:1.2.0"
