@@ -65,10 +65,6 @@ dependencies {
     implementation "com.jumio.android:zoom:3.9.1@aar"             // Face Liveness library (ZoOm)
     implementation "com.facetec:zoom-authentication:8.12.1@aar"   // Face Liveness library (ZoOm)
 
-    implementation "com.jumio.android:nv-barcode-vision:3.9.1@aar"        // Barcode scanning alternative (reduced size)
-
-    implementation "com.jumio.android:nv-mrz:3.9.1@aar"       // MRZ scanning
     implementation "com.jumio.android:nv-ocr:3.9.1@aar"       // Template matcher
-    implementation "com.jumio.android:dv:3.9.1@aar"           // Document verification library
     implementation "com.jumio.android:auth:3.9.1@aar"         // Authentication library
 }
