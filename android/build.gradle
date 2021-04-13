@@ -71,5 +71,4 @@ dependencies {
     implementation "com.jumio.android:nv-ocr:3.9.1@aar"       // Template matcher
     implementation "com.jumio.android:dv:3.9.1@aar"           // Document verification library
     implementation "com.jumio.android:auth:3.9.1@aar"         // Authentication library
-    implementation "com.jumio.android:bam:3.9.1@aar"          // BAM checkout library
 }
