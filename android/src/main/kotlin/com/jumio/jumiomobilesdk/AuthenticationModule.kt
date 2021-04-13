@@ -94,7 +94,7 @@ class AuthenticationModule : ModuleBase() {
 			
 			if (resultCode == Activity.RESULT_OK) {
 
-				val transactionReference: String = data.getStringExtra(AuthenticationSDK.EXTRA_TRANSACTION_REFERENCE)
+				val transactionReference: String? = data.getStringExtra(AuthenticationSDK.EXTRA_TRANSACTION_REFERENCE)
 				val authenticationResult: AuthenticationResult? = data.getSerializableExtra(AuthenticationSDK.EXTRA_SCAN_DATA) as? AuthenticationResult
 
 				authenticationResult?.let {
@@ -114,9 +114,9 @@ class AuthenticationModule : ModuleBase() {
 	}
 
 	private fun sendCancelResult(data: Intent) {
-		val errorMessage: String = data.getStringExtra(AuthenticationSDK.EXTRA_ERROR_MESSAGE)
-		val errorCode: String = data.getStringExtra(AuthenticationSDK.EXTRA_ERROR_CODE)
-		sendResult(mapOf<String, String>(
+		val errorMessage: String? = data.getStringExtra(AuthenticationSDK.EXTRA_ERROR_MESSAGE)
+		val errorCode: String? = data.getStringExtra(AuthenticationSDK.EXTRA_ERROR_CODE)
+		sendResult(mapOf<String, String?>(
                 "errorCode" to errorCode,
                 "errorMessage" to errorMessage
         ))
