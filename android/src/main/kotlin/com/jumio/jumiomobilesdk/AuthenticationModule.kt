@@ -91,7 +91,7 @@ class AuthenticationModule : ModuleBase() {
 
 	override fun handleActivityResult(requestCode: Int, resultCode: Int, data: Intent?): Boolean {
 		return if (requestCode == AuthenticationSDK.REQUEST_CODE && data != null) {
-			var transactionReference: String = data.getStringExtra(AuthenticationSDK.EXTRA_TRANSACTION_REFERENCE)
+			
 			if (resultCode == Activity.RESULT_OK) {
 
 				val transactionReference: String = data.getStringExtra(AuthenticationSDK.EXTRA_TRANSACTION_REFERENCE)
