@@ -75,7 +75,7 @@
 "netverify.scan-options.cell.document-variant.plastic.title" = "Cartão de plástico";
 "netverify.scan-options.change-country.link" = "Mudar país";
 "netverify.scan-options.hint" = "Selecione o tipo de documento que pretende digitalizar";
-"netverify.scan-options.issuing-country.text" = "Certifique-se de remover seu documento do envelope plástico.";
+"netverify.scan-options.issuing-country.text" = " - Certifique-se de remover seu documento do envelope plástico.";
 "netverify.scan-options.navigationItem.title" = "";
 "netverify.scan-view.accessibility-label.button.switch-to-back-camera" = "Mude para a câmera traseira";
 "netverify.scan-view.accessibility-label.button.switch-to-front-camera" = "Mude para a câmera dianteira";
