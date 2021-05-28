@@ -56,13 +56,7 @@ class _HomePageState extends State<HomePage> {
               RaisedButton(
                 child: Text("Start Document Verification"),
                 onPressed: () {
-                  startDocumentVerification();
-                },
-              ),
-              RaisedButton(
-                child: Text("Start BAM Checkout"),
-                onPressed: () {
-                  startBam();
+                  startAuthentication();
                 },
               ),
             ],
@@ -76,74 +70,33 @@ class _HomePageState extends State<HomePage> {
     await _logErrors(() async {
       await JumioMobileSDK.initNetverify(API_TOKEN, API_SECRET, DATACENTER, {
         "enableVerification": true,
-        //"callbackUrl": "URL",
-        //"enableIdentityVerification": true,
-        //"preselectedCountry": "USA",
-        //"customerInternalReference": "123456789",
-        //"reportingCriteria": "Criteria",
-        //"userReference": "ID",
-        //"sendDebugInfoToJumio": true,
-        //"dataExtractionOnMobileOnly": false,
-        //"cameraPosition": "back",
-        //"preselectedDocumentVariant": "plastic",
-        //"documentTypes": ["PASSPORT", "DRIVER_LICENSE", "IDENTITY_CARD", "VISA"],
-        //"enableWatchlistScreening": ["enabled", "disabled" || "default"],
-        //"watchlistSearchProfile": "YOURPROFILENAME",
+        "enableIdentityVerification": true,
+        "userReference": "39761479749", //What to set? Numero do documento no Digital, identificador do usuário (Ideal é o BTG ID)
+        //merchantScanReference: regra pro identificador de usuário (eles usam date e cpf)
+        "preselectedCountry": "BRA",
+        "cameraPosition": "BACK",
+        "documentTypes": ["DRIVER_LICENSE", "IDENTITY_CARD"],
+        //Quais serão os docs aceitos?
+        "enableWatchlistScreening": "ENABLED",
+        "sendDebugInfoToJumio": true,
+        "preselectedDocumentVariant": "PAPER"
+        //"watchlistSearchProfile": "YOURPROFILENAME"
       });
       final result = await JumioMobileSDK.startNetverify();
       await _showDialogWithMessage("Netverify has completed. Result: $result");
     });
   }
 
-  Future<void> startDocumentVerification() async {
+  Future<void> startAuthentication() async {
     await _logErrors(() async {
-      await JumioMobileSDK.initDocumentVerification(
+      await JumioMobileSDK.initAuthentication(
           API_TOKEN, API_SECRET, DATACENTER, {
-        "type": "BS",
-        "userReference": "123456789",
-        "country": "USA",
-        "customerInternalReference": "123456789",
-        //"reportingCriteria": "Criteria",
-        //"callbackUrl": "URL",
-        //"documentName": "Name",
-        //"customDocumentCode": "Custom",
-        //"cameraPosition": "back",
-        //"enableExtraction": true
+        "enrollmentTransactionReference": 'a74a4f26-9be4-434d-a320-cb87d7c542c0',
+        "userReference": "11780859708",
       });
-      final result = await JumioMobileSDK.startDocumentVerification();
+      final result = await JumioMobileSDK.startAuthentication();
       await _showDialogWithMessage(
           "Document verification completed with result: " + result.toString());
-    });
-  }
-
-  Future<void> startBam() async {
-    await _logErrors(() async {
-      await JumioMobileSDK.initBAM(
-          BAM_API_TOKEN, BAM_API_SECRET, BAM_DATACENTER, {
-//      "cardHolderNameRequired": true,
-//      "sortCodeAndAccountNumberRequired": false,
-//      "expiryRequired": true,
-//      "cvvRequired": true,
-//      "expiryEditable": false,
-//      "cardHolderNameEditable": false,
-//      "reportingCriteria": "Criteria",
-//      "vibrationEffectEnabled": true,
-//      "enableFlashOnScanStart": false,
-//      "cardNumberMaskingEnabled": false,
-//      "offlineToken": "TOKEN",
-//      "cameraPosition": "back",
-//      "cardTypes": [
-//        "VISA",
-//        "MASTER_CARD",
-//        "AMERICAN_EXPRESS",
-//        "CHINA_UNIONPAY",
-//        "DINERS_CLUB",
-//        "DISCOVER",
-//        "JCB"
-//      ]
-      });
-      final result = await JumioMobileSDK.startBAM();
-      await _showDialogWithMessage("BAM checkout result: $result");
     });
   }
 

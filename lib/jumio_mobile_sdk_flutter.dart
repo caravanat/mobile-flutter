@@ -8,7 +8,7 @@ class JumioMobileSDK {
 
   static Future<void> initNetverify(String apiToken, String apiSecret,
       String dataCenter, Map<String, dynamic> options,
-      [Map<String, dynamic> customization]) async {
+      [Map<String, dynamic>? customization]) async {
     await _channel.invokeMethod('initNetverify', {
       'apiToken': apiToken,
       'apiSecret': apiSecret,
@@ -18,13 +18,13 @@ class JumioMobileSDK {
     });
   }
 
-  static Future<Map<dynamic, dynamic>> startNetverify() async {
+  static Future<Map<dynamic, dynamic>?> startNetverify() async {
     return await _channel.invokeMethod('startNetverify');
   }
 
   static Future<void> initAuthentication(String apiToken, String apiSecret,
       String dataCenter, Map<String, dynamic> options,
-      [Map<String, dynamic> customization]) async {
+      [Map<String, dynamic>? customization]) async {
     await _channel.invokeMethod('initAuthentication', {
       'apiToken': apiToken,
       'apiSecret': apiSecret,
@@ -34,7 +34,7 @@ class JumioMobileSDK {
     });
   }
 
-  static Future<Map<dynamic, dynamic>> startAuthentication() async {
+  static Future<Map<dynamic, dynamic>?> startAuthentication() async {
     return await _channel.invokeMethod('startAuthentication');
   }
 }
