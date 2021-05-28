@@ -19,6 +19,8 @@ This plugin is compatible with version 3.9.1 of the Jumio SDK. If you have quest
 - [Customization](#customization)
 - [FAQ](#faq)
    - [App Crash at Launch for iOS](#app-crash-at-launch-for-ios)
+   - [iOS Localization](#ios-localization)
+   - [iProov String Keys](#iproov-string-keys)
 - [Result Objects](#result-objects)
 - [Support](#support)
 
@@ -139,7 +141,6 @@ JumioMobileSDK.initNetverify(<API_TOKEN>, <API_SECRET>, <DATACENTER>, {configura
 
 Datacenter can either be **US**, **EU** or **SG**.
 
-
 Configure the SDK with the *configuration*-Object.
 
 | Configuration | Datatype | Description |
@@ -206,7 +207,7 @@ To initialize the SDK, perform the following call.
 JumioMobileSDK.initDocumentVerification(<API_TOKEN>, <API_SECRET>, <DATACENTER>, {configuration});
 ```
 
-Datacenter can either be **US** or **EU**.
+Datacenter can either be **US**, **EU** or **SG**.
 
 Configure the SDK with the *configuration*-Object. **(configuration marked with * are mandatory)**
 
@@ -474,6 +475,26 @@ post_install do |installer|
 end
 ```
 Please refer to [iOS guide](https://github.com/Jumio/mobile-sdk-ios#via-cocoapods) for more details.
+
+### iOS Localization
+After installing Cocoapods, please localize your iOS application using the languages provided at the following path:   
+`ios -> Pods -> JumioMobileSDK -> JumioMobileSDK-3.9.0 -> Localizations -> xx.lproj`
+
+![Localization](images/Flutter_localization.gif)
+
+### iProov String Keys
+Please note that as of 3.8.0. the following keys have been added to the SDK:
+
+* `"IProov_IntroFlash"`
+* `"IProov_IntroLa"`
+* `"IProov_PromptLivenessAlignFace"`
+* `"IProov_PromptLivenessNoTarget"`
+* `"IProov_PromptLivenessScanCompleted"`
+* `"IProov_PromptTooClose"`
+* `"IProov_PromptTooFar"`
+
+Make sure your `podfile` is up to date and that new pod versions are installed properly so your `Localizable` files include new strings.
+For more information, please refer to our [Changelog](https://github.com/Jumio/mobile-sdk-ios/blob/master/docs/changelog) and [Transition Guide](https://github.com/Jumio/mobile-sdk-ios/blob/master/docs/transition-guide_id-verification-fastfill.md#3.8.0).
 
 # Support
 
