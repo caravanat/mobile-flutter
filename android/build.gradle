@@ -49,7 +49,15 @@ dependencies {
 
     // mandatory
     implementation "com.jumio.android:core:${SDK_VERSION}@aar"       // Jumio Core library
+    implementation "com.jumio.android:bam:${SDK_VERSION}@aar"
+    implementation "com.jumio.android:auth:${SDK_VERSION}@aar"         // Authentication library
+
     implementation "com.jumio.android:nv:${SDK_VERSION}@aar"         // Netverify library
+    implementation "com.jumio.android:nv-mrz:${SDK_VERSION}@aar"       // MRZ scanning
+    implementation "com.jumio.android:nv-nfc:${SDK_VERSION}@aar"
+    implementation "com.jumio.android:nv-ocr:${SDK_VERSION}@aar"       // Template matcher
+    implementation "com.jumio.android:nv-barcode:${SDK_VERSION}@aar"
+    implementation "com.jumio.android:nv-barcode-vision:${SDK_VERSION}@aar"
 
     implementation "androidx.appcompat:appcompat:1.2.0"
     implementation "androidx.cardview:cardview:1.0.0"
@@ -66,10 +74,10 @@ dependencies {
     implementation "com.jumio.android:zoom:${SDK_VERSION}@aar"             // Face Liveness library (ZoOm)
     implementation "com.facetec:zoom-authentication:8.12.1@aar"   // Face Liveness library (ZoOm)
 
-    implementation "com.jumio.android:nv-mrz:${SDK_VERSION}@aar"       // MRZ scanning
-    implementation "com.jumio.android:nv-ocr:${SDK_VERSION}@aar"       // Template matcher
-    implementation "com.jumio.android:auth:${SDK_VERSION}@aar"         // Authentication library
-    implementation "com.jumio.android:nv-barcode:${SDK_VERSION}@aar"
     implementation "com.jumio.android:dv:${SDK_VERSION}@aar"
-    implementation "com.jumio.android:nv-nfc:${SDK_VERSION}@aar"
+
+    implementation "org.jmrtd:jmrtd:0.7.19"
+	implementation "org.ejbca.cvc:cert-cvc:1.4.6"
+	implementation "org.bouncycastle:bcprov-jdk15on:1.65"
+	implementation "net.sf.scuba:scuba-sc-android:0.0.18"
 }
