@@ -54,6 +54,7 @@ dependencies {
     implementation "com.jumio.android:nv-nfc:${SDK_VERSION}@aar"
     implementation "com.jumio.android:nv-ocr:${SDK_VERSION}@aar"
     implementation "com.jumio.android:nv-barcode:${SDK_VERSION}@aar"
+    implementation "com.jumio.android:face:${SDK_VERSION}@aar"
     implementation "com.jumio.android:dv:${SDK_VERSION}@aar"
 
     implementation 'androidx.appcompat:appcompat:1.1.0'
@@ -69,4 +70,8 @@ dependencies {
     implementation "org.ejbca.cvc:cert-cvc:1.4.6"           // eMRTD Scanning
     implementation "org.bouncycastle:bcprov-jdk15on:1.65"   // eMRTD Scanning
     implementation "net.sf.scuba:scuba-sc-android:0.0.18"   // eMRTD Scanning
+
+    implementation "org.jetbrains.kotlinx:kotlinx-serialization-core:1.0.0"
+    implementation "org.jetbrains.kotlinx:kotlinx-serialization-json:1.0.0"
+
 }
