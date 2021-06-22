@@ -48,24 +48,26 @@ dependencies {
     implementation "org.jetbrains.kotlin:kotlin-stdlib-jdk7:$kotlin_version"
 
     // mandatory
-    implementation "com.jumio.android:core:3.9.1@aar"       // Jumio Core library
-    implementation "com.jumio.android:nv:3.9.1@aar"         // Netverify library
+    implementation "com.jumio.android:core:${SDK_VERSION}@aar"       // Jumio Core library
+    implementation "com.jumio.android:nv:${SDK_VERSION}@aar"         // Netverify library
 
     implementation "androidx.appcompat:appcompat:1.2.0"
     implementation "androidx.cardview:cardview:1.0.0"
     implementation "androidx.room:room-runtime:2.2.6"
     implementation "androidx.constraintlayout:constraintlayout:2.0.4"
     implementation "androidx.core:core-ktx:1.3.2"
+    implementation "androidx.localbroadcastmanager:localbroadcastmanager:1.0.0"
 
     implementation "com.google.android.material:material:1.2.1"
 
     implementation "org.jetbrains.kotlinx:kotlinx-serialization-core:1.0.0"
     implementation "org.jetbrains.kotlinx:kotlinx-serialization-json:1.0.0"
 
-    implementation "com.jumio.android:zoom:3.9.1@aar"             // Face Liveness library (ZoOm)
+    implementation "com.jumio.android:zoom:${SDK_VERSION}@aar"             // Face Liveness library (ZoOm)
     implementation "com.facetec:zoom-authentication:8.12.1@aar"   // Face Liveness library (ZoOm)
 
-    implementation "com.jumio.android:nv-mrz:3.9.1@aar"       // MRZ scanning
-    implementation "com.jumio.android:nv-ocr:3.9.1@aar"       // Template matcher
-    implementation "com.jumio.android:auth:3.9.1@aar"         // Authentication library
+    implementation "com.jumio.android:nv-mrz:${SDK_VERSION}@aar"       // MRZ scanning
+    implementation "com.jumio.android:nv-ocr:${SDK_VERSION}@aar"       // Template matcher
+    implementation "com.jumio.android:auth:${SDK_VERSION}@aar"         // Authentication library
+    implementation "com.jumio.android:nv-barcode:${SDK_VERSION}@aar"
 }
