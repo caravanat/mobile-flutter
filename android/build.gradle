@@ -48,7 +48,7 @@ dependencies {
     implementation "org.jetbrains.kotlin:kotlin-stdlib-jdk7:$kotlin_version"
     implementation "com.jumio.android:core:${SDK_VERSION}@aar"
     implementation "com.jumio.android:bam:${SDK_VERSION}@aar"
-    implementation "com.jumio.android:auth:${SDK_VERSION}@aar"
+    implementation "com.jumio.android:auth:3.9.1@aar"
     implementation "com.jumio.android:nv:${SDK_VERSION}@aar"
     implementation "com.jumio.android:nv-mrz:${SDK_VERSION}@aar"
     implementation "com.jumio.android:nv-nfc:${SDK_VERSION}@aar"
